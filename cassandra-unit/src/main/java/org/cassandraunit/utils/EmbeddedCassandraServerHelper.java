@@ -104,7 +104,7 @@ public class EmbeddedCassandraServerHelper {
             }
         });
         try {
-            startupLatch.await(10, SECONDS);
+            startupLatch.await(30, SECONDS);
         } catch (InterruptedException e) {
             log.error("Interrupted waiting for Cassandra daemon to start:", e);
             throw new AssertionError(e);
